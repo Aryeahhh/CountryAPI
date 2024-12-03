@@ -125,6 +125,9 @@ public class Country {
     public Idd getIdd() {
         return idd;
     }
+    public List<String> getCallingCodes() {
+        return idd.getSuffixes();
+    }
 
     public void setIdd(Idd idd) {
         this.idd = idd;

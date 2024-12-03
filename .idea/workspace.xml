@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a745478a-123e-4f1a-a862-3ed5e4dc7016" name="Changes" comment="Completed Country Class">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/assignment2/ApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+    <list default="true" id="a745478a-123e-4f1a-a862-3ed5e4dc7016" name="Changes" comment="Added basic search functionality">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/assignment2/CountryDetailsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/assignment2/country-details-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/assignment2/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/assignment2/ApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/assignment2/ApiService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/assignment2/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/assignment2/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/assignment2/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/assignment2/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/assignment2/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/assignment2/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/assignment2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/assignment2/hello-view.fxml" afterDir="false" />
     </list>
@@ -20,6 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -45,11 +50,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,6 +65,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\University\COMP-1011\Assignment2\src\main\resources\org\example\assignment2" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -73,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733262988272</updated>
-      <workItem from="1733262989329" duration="1057000" />
+      <workItem from="1733262989329" duration="3492000" />
     </task>
     <task id="LOCAL-00001" summary="Made Country Class according the response.">
       <option name="closed" value="true" />
@@ -83,7 +95,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733263558010</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created Api Service Class">
+      <option name="closed" value="true" />
+      <created>1733264166347</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733264166347</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added basic search functionality">
+      <option name="closed" value="true" />
+      <created>1733264281162</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733264281162</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +120,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made Country Class according the response." />
     <MESSAGE value="Completed Country Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed Country Class" />
+    <MESSAGE value="Created Api Service Class" />
+    <MESSAGE value="Added basic search functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic search functionality" />
   </component>
 </project>

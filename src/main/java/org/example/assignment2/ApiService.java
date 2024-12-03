@@ -3,31 +3,30 @@ package org.example.assignment2;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
-
-import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
 public class ApiService {
+    private static final String API_URL = "https://restcountries.com/v3.1/name/";
 
-    public List<Country> fetchCountryByName(String countryName) throws IOException {
-        String urlString = "https://restcountries.com/v3.1/name/" + countryName;
-        URL url = new URL(urlString);
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setRequestMethod("GET");
+    public List<Country> fetchCountryByName(String countryName) {
+        try {
+            URL url = new URL(API_URL + countryName);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
 
-        try (InputStreamReader reader = new InputStreamReader(connection.getInputStream())) {
-            Type countryListType = new TypeToken<List<Country>>() {}.getType();
-            return new Gson().fromJson(reader, countryListType);
-        } catch (JsonSyntaxException | EOFException e) {
-            e.printStackTrace();
-            throw new IOException("Error parsing JSON response", e);
-        } finally {
-            connection.disconnect();
+            if (connection.getResponseCode() == 200) {
+                InputStreamReader reader = new InputStreamReader(connection.getInputStream());
+                return new Gson().fromJson(reader, new TypeToken<List<Country>>() {}.getType());
+            } else {
+                System.err.println("Error: " + connection.getResponseCode());
+            }
+        } catch (JsonSyntaxException | IOException e) {
+            System.err.println("Updating Suggestions");
         }
+        return null;
     }
 }

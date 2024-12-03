@@ -45,8 +45,7 @@ public class HelloController {
         String countryName = searchField.getText().replace(" ", "%20");
         try {
             List<Country> countries = apiService.fetchCountryByName(countryName);
-            if (!countries.isEmpty()) {
-                // Find the country that matches the selected suggestion exactly
+            if (countries != null && !countries.isEmpty()) {
                 Country country = countries.stream()
                         .filter(c -> c.getName().getCommon().equalsIgnoreCase(searchField.getText()))
                         .findFirst()
@@ -56,7 +55,8 @@ public class HelloController {
                 suggestionsList.setVisible(false);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            // Handle the exception gracefully without printing the stack trace
+            System.err.println("Error: Unable to search country");
         }
     }
 
@@ -65,12 +65,18 @@ public class HelloController {
         if (!query.isEmpty()) {
             try {
                 List<Country> countries = apiService.fetchCountryByName(query);
-                suggestions.setAll(countries.stream()
-                        .map(country -> country.getName().getCommon())
-                        .collect(Collectors.toList()));
-                suggestionsList.setVisible(true);
+                if (countries != null) {
+                    suggestions.setAll(countries.stream()
+                            .map(country -> country.getName().getCommon())
+                            .collect(Collectors.toList()));
+                    suggestionsList.setVisible(true);
+                } else {
+                    suggestions.clear();
+                    suggestionsList.setVisible(false);
+                }
             } catch (Exception e) {
-                e.printStackTrace();
+                // Handle the exception gracefully without printing the stack trace
+                System.err.println("Error: Unable to update suggestions");
             }
         } else {
             suggestions.clear();

@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a745478a-123e-4f1a-a862-3ed5e4dc7016" name="Changes" comment="Added suggestions functionality, added a new scene to display data.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/assignment2/CountryListTypeToken.java" afterDir="false" />
+    <list default="true" id="a745478a-123e-4f1a-a862-3ed5e4dc7016" name="Changes" comment="Added some styles and added some error handling with it">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/assignment2/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/assignment2/ApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/assignment2/ApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/assignment2/CountryDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/assignment2/CountryDetailsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/assignment2/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/assignment2/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/assignment2/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/assignment2/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/assignment2/country-details-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/assignment2/country-details-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/assignment2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/assignment2/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/assignment2/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/assignment2/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +54,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/University/COMP-1011/Assignment2/src/main/resources/org/example/assignment2",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -65,8 +65,14 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\University\COMP-1011\Assignment2\src\main\resources\org\example\assignment2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\University\COMP-1011\Assignment2\src\main\resources\org\example\assignment2" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example.assignment2" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -84,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733262988272</updated>
-      <workItem from="1733262989329" duration="4758000" />
+      <workItem from="1733262989329" duration="9521000" />
     </task>
     <task id="LOCAL-00001" summary="Made Country Class according the response.">
       <option name="closed" value="true" />
@@ -118,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733266559635</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added some styles and added some error handling with it">
+      <option name="closed" value="true" />
+      <created>1733268170434</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733268170434</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +144,7 @@
     <MESSAGE value="Created Api Service Class" />
     <MESSAGE value="Added basic search functionality" />
     <MESSAGE value="Added suggestions functionality, added a new scene to display data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added suggestions functionality, added a new scene to display data." />
+    <MESSAGE value="Added some styles and added some error handling with it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some styles and added some error handling with it" />
   </component>
 </project>

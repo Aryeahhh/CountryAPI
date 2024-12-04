@@ -11,7 +11,12 @@ import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
+/**
+ * Controller class for displaying the details of a country.
+ * This class is responsible for populating the UI elements with data about the country.
+ */
 public class CountryDetailsController {
+
     @FXML
     private Label headerLabel;
     @FXML
@@ -39,12 +44,22 @@ public class CountryDetailsController {
 
     private Stage stage;
 
+    /**
+     * Initializes the controller by setting up the event handler for the back button.
+     */
     @FXML
     public void initialize() {
         backButton.setOnAction(event -> handleBackButton());
     }
 
+    /**
+     * Sets the country details to be displayed in the UI.
+     * This method populates various UI elements like labels and image views with data from the given country object.
+     *
+     * @param country The country whose details are to be displayed.
+     */
     public void setCountryDetails(Country country) {
+        // Format numbers using the US locale for consistency in formatting large numbers
         NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US);
 
         headerLabel.setText(country.getName().getCommon());
@@ -60,10 +75,19 @@ public class CountryDetailsController {
         flagImageView.setImage(new Image(country.getFlags().getPng()));
     }
 
+    /**
+     * Handles the action of clicking the back button.
+     * Closes the current stage (window) when the back button is clicked.
+     */
     private void handleBackButton() {
         stage.close();
     }
 
+    /**
+     * Sets the stage (window) for this controller.
+     *
+     * @param stage The stage to be set for this controller.
+     */
     public void setStage(Stage stage) {
         this.stage = stage;
     }

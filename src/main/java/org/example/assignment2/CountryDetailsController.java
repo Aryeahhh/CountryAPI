@@ -2,17 +2,18 @@ package org.example.assignment2;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.text.NumberFormat;
+import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
 /**
- * Controller class for displaying the details of a country.
  * This class is responsible for populating the UI elements with data about the country.
  */
 public class CountryDetailsController {
@@ -37,6 +38,8 @@ public class CountryDetailsController {
     private Label timezoneLabel;
     @FXML
     private Label callingCodeLabel;
+    @FXML
+    private ComboBox<String> callingCodeComboBox;
     @FXML
     private ImageView flagImageView;
     @FXML
@@ -69,9 +72,14 @@ public class CountryDetailsController {
         subregionLabel.setText("Subregion: " + country.getSubregion());
         areaLabel.setText("Area: " + numberFormat.format(country.getArea()) + " km²");
         languagesLabel.setText("Languages: " + String.join(", ", country.getLanguages().values()));
-        currencyLabel.setText("Currency: " + country.getCurrencies().values().stream().map(org.example.assignment2.Country.Currency::getName).collect(Collectors.joining(", ")));
+        currencyLabel.setText("Currency: " + country.getCurrencies().values().stream().map(Country.Currency::getName).collect(Collectors.joining(", ")));
         timezoneLabel.setText("Timezones: " + String.join(", ", country.getTimezones()));
-        callingCodeLabel.setText("Calling Code: +" + country.getCallingCodes().get(0));
+
+        // Set the first calling code in the label
+        callingCodeLabel.setText("Calling Code: " + country.getIdd().getRoot() + country.getIdd().getSuffixes().get(0));
+        List<String> timezones = country.getTimezones().stream().limit(5).collect(Collectors.toList());
+        timezoneLabel.setText("Timezones: " + String.join(", ", timezones));
+
         flagImageView.setImage(new Image(country.getFlags().getPng()));
     }
 

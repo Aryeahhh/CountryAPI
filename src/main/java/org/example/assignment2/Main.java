@@ -13,7 +13,7 @@ import java.io.IOException;
  * This class is responsible for launching the JavaFX application,
  * loading the initial FXML view, and displaying the window.
  */
-public class HelloApplication extends Application {
+public class Main extends Application {
 
     /**
      * The entry point for starting the JavaFX application.
@@ -25,7 +25,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // Load the FXML file for the initial view
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("search-view.fxml"));
 
         // Create a scene with the loaded FXML and set its dimensions
         Scene scene = new Scene(fxmlLoader.load(), 800, 600); // Increased size

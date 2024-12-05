@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
  * This class handles the logic for searching countries, displaying
  * suggestions, and showing detailed country information.
  */
-public class HelloController {
+public class SearchController {
 
     @FXML
     private TextField searchField;  // Text field for entering country name
